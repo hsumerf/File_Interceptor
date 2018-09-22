@@ -1,0 +1,29 @@
+###[ IP ]### 
+  version   = 4L
+  ihl       = 5L
+  tos       = 0x0
+  len       = 647
+  id        = 44474
+  flags     = DF
+  frag      = 0L
+  ttl       = 47
+  proto     = tcp
+  chksum    = 0x5617
+  src       = 50.97.82.44
+  dst       = 192.168.0.106
+  \options   \
+###[ TCP ]### 
+     sport     = http
+     dport     = 60742
+     seq       = 582759504
+     ack       = 938351746
+     dataofs   = 8L
+     reserved  = 0L
+     flags     = PA
+     window    = 122
+     chksum    = 0x1279
+     urgptr    = 0
+     options   = [('NOP', None), ('NOP', None), ('Timestamp', (3513293868, 1359729639))]
+###[ Raw ]### 
+        load      = 'HTTP/1.1 302 Found\r\nDate: Fri, 21 Sep 2018 09:41:44 GMT\r\nServer: Apache/2.2.15 (CentOS)\r\nLocation: http://mirror2.internetdownloadmanager.com/idman631build5.exe\r\nContent-Length: 346\r\nConnection: close\r\nContent-Type: text/html; charset=iso-8859-1\r\n\r\n<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n<html><head>\n<title>302 Found</title>\n</head><body>\n<h1>Found</h1>\n<p>The document has moved <a href="http://mirror2.internetdownloadmanager.com/idman631build5.exe">here</a>.</p>\n<hr>\n<address>Apache/2.2.15 (CentOS) Server at mirror2.internetdownloadmanager.com Port 80</address>\n</body></html>\n'
+

@@ -1,29 +1,25 @@
 #echo 1 > /proc/sys/net/ipv4/ip_forward
 #command before running this program, "iptables -I OUTPUT -j NFQUEUE --queue-num 0"
 #command before running this program, "iptables -I INPUT -j NFQUEUE --queue-num 0"
-#Showing packets and their responses
+
 #!usr/bin/env python
 import netfilterqueue
 import scapy.all as scapy
-
-ack_list = []
 
 def process_packet(packet):
     scapy_packet = scapy.IP(packet.get_payload())
     if scapy_packet.haslayer(scapy.Raw):
         # print(scapy_packet.show())
         if scapy_packet[scapy.TCP].dport == 80:
-            if ".exe" in scapy_packet[scapy.Raw].load:
-                print("[+] exe Request")
-                ack_list.append(scapy_packet[scapy.TCP].ack)
-                print(scapy_packet.show())
+            # if ".exe" in scapy_packet[scapy.Raw].load:
+                # print(scapy_packet[scapy.TCP].load)
+            print("HTTP Request:")
+            # print(scapy_packet[scapy.Raw])
+            print(scapy_packet[scapy.TCP].show())
+
         elif scapy_packet[scapy.TCP].sport == 80:
-            if scapy_packet[scapy.TCP].seq in ack_list:
-                ack_list.remove(scapy_packet[scapy.TCP].seq)
-                print("Replacing File")
-                print(scapy_packet.show())
-
-
+            print("HTTP Response:")
+            print(scapy_packet[scapy.TCP].show())
 
 
 

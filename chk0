@@ -1,0 +1,28 @@
+###[ IP ]### 
+  version   = 4L
+  ihl       = 5L
+  tos       = 0x0
+  len       = 532
+  id        = 21958
+  flags     = DF
+  frag      = 0L
+  ttl       = 64
+  proto     = tcp
+  chksum    = 0x9d7e
+  src       = 192.168.0.106
+  dst       = 50.97.82.44
+  \options   \
+###[ TCP ]### 
+     sport     = 60742
+     dport     = http
+     seq       = 938351266
+     ack       = 582759504
+     dataofs   = 8L
+     reserved  = 0L
+     flags     = PA
+     window    = 229
+     chksum    = 0xe3f7
+     urgptr    = 0
+     options   = [('NOP', None), ('NOP', None), ('Timestamp', (1359729639, 3513291765))]
+###[ Raw ]### 
+        load      = 'GET /idman629build2.exe?b=1&filename=idman631build5.exe HTTP/1.1\r\nHost: mirror2.internetdownloadmanager.com\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate\r\nReferer: http://internetdownloadmanager.com/download.html\r\nCookie: IDM=5aed097e.5765e7111b861\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\n\r\n'
